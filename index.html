@@ -1,11 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Abegunde Emmanuel | Portfolio</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-        <link rel="stylesheet" href="./css/styles.css">
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+        />
+        <link rel="stylesheet" href="./css/styles.css" />
+        <script src="./index.js"></script>
     </head>
 
     <body>
@@ -19,109 +23,279 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-    </header>
+        </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div>
-                <img src="./assets/user.png" alt="" height="200px">
-            </div>
-
-            <div class="intro">
-                <h1>Hello, I'm <span id="name">Emmanuel</span></h1>
-                <h3>Frontend Developer | Web3 Enthusiast</h3>
-                <p>I’m a passionate Web developer with a growing interest in Web3 and emerging technologies. 
-                I enjoy transforming ideas into clean, responsive, and user-friendly web experiences. 
-                With a strong foundation in HTML, CSS, and Django, I’m constantly learning and building projects 
-                that solve real-world problems while improving my skills every day.
-                </p>
-                <div class="social">
-                    <a href="https://www.linkedin.com/in/emmanuelabegunde"><i class="bi bi-linkedin"></i></a>
-                    <a href="https://github.com/Hemarnuel10/"><i class="bi bi-github"></i></a>
-                    <a href="https://x.com/abegunde47936"><i class="bi bi-twitter-x"></i></a>
-                    <a href="mailto:hemarnuel10@gmail.com"><i class="bi bi-envelope"></i></a>
-                </div>
-                <button>View My Work <i class="bi bi-arrow-bar-right bi-2x"></i></button>
-            </div>
-        </section>
-    
-        <section class="about" id="about"> 
-            <h2>About Me</h2>
-            <div class="about-info">      
+        <main>
+            <section id="home" class="hero">
                 <div>
-                    <p>I'm a passionate web developer Proficient in HTML, CSS, JavaScript and Django.
-                    I love building clean and responsive websites.</p>
-                    
-                    <div class="skill-details">
-                        <div class="details">
-                            <p id="skill">Skill</p>
-                            <p id="experience">Experience</p>
-                            <p id="education">Education</p>
-                        </div>
-                        <div>
-                            <div id="skill-info">
+                    <img src="./assets/emmanuel.png" alt="" height="300px" />
+                </div>
+
+                <div class="intro">
+                    <h1>Hello, I'm <span id="name">Emmanuel</span></h1>
+                    <h3>Frontend Developer | Web3 Enthusiast</h3>
+                    <p>
+                        I’m a passionate Web developer with a growing interest in Web3 and emerging technologies. I
+                        enjoy transforming ideas into clean, responsive, and user-friendly web experiences. With a
+                        strong foundation in HTML, CSS, and Django, I’m constantly learning and building projects that
+                        solve real-world problems while improving my skills every day.
+                    </p>
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/emmanuelabegunde"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://github.com/Hemarnuel10/"><i class="bi bi-github"></i></a>
+                        <a href="https://x.com/abegunde47936"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://discordapp.com/users/1165517390109495337"><i class="bi bi-discord"></i></a>
+                    </div>
+                    <a href="#projects"
+                        ><button>View My Work <i class="bi bi-arrow-bar-right bi-2x"></i></button
+                    ></a>
+                </div>
+            </section>
+
+            <section class="about" id="about">
+                <h2>About Me</h2>
+                <div class="about-info">
+                    <div>
+                        <img src="./assets/emmanuel.png" alt="" height="220px" />
+                    </div>
+
+                    <div>
+                        <p class="about-intro">
+                            I'm a passionate web developer Proficient in HTML, CSS, JavaScript and Django. I love
+                            building clean and responsive websites.
+                        </p>
+
+                        <div class="skill-details">
+                            <div class="details">
+                                <p id="skill" onclick="showSection('skills')">Skill</p>
+                                <p id="experience" onclick="showSection('experience')">Experience</p>
+                                <p id="education" onclick="showSection('education')">Education</p>
+                            </div>
+
+                            <div id="skill-info" class="tab-content">
                                 <p>HTML</p>
-                                <div class="level"><span id="html"></span></div>
+                                <div class="level"><span class="score html"></span> 99%</div>
+
                                 <p>CSS</p>
-                                <div id="level"></div>
-                                <P>JAVASCRIPT</P>
-                                <div id="level"></div>
-                                <P>DJANGO</P>
-                                <div id="level"></div>
+                                <div class="level"><span class="score css"></span> 95%</div>
+
+                                <p>JAVASCRIPT</p>
+                                <div class="level"><span class="score js"></span> 60%</div>
+
+                                <p>DJANGO</p>
+                                <div class="level"><span class="score django"></span> 50%</div>
                             </div>
 
-                            <div id="experience-info">
-                                <p>HTML</p>
+                            <div id="experience-info" class="tab-content">
+                                <h3>Web Development Experience</h3>
+
+                                <p>
+                                    I have practical experience building full-stack and frontend web applications
+                                    through personal projects and structured learning.
+                                </p>
+
+                                <ul>
+                                    <li>
+                                        Built multiple web applications using HTML, CSS, and JavaScript, focusing on
+                                        responsive and user-friendly design.
+                                    </li>
+
+                                    <li>
+                                        Completed projects including Social Network, Mail, Wiki, and Commerce, gaining
+                                        hands-on experience with backend development using Python and Django.
+                                    </li>
+
+                                    <li>
+                                        Developed understanding of database design, user authentication systems, and
+                                        dynamic web applications.
+                                    </li>
+
+                                    <li>
+                                        Actively learning modern web development practices and exploring Web3
+                                        technologies and blockchain fundamentals.
+                                    </li>
+
+                                    <li>
+                                        Built and deployed personal projects to improve problem-solving, debugging, and
+                                        code structuring skills.
+                                    </li>
+                                </ul>
                             </div>
 
-                            <div id="education-info">
-                                <P>DJANGO</P>
+                            <div id="education-info" class="tab-content">
+                                <p>BSc Aerospace Engineering - Lagos State University</p>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
+            </section>
 
-                <div>
-                    <img src="./assets/user.png" alt="" height="220px">
+            <section class="projects" id="projects">
+                <h2>My Projects</h2>
+                <div class="project-container">
+                    <div class="project-card">
+                        <div class="slider">
+                            <div class="slides">
+                                <img src="./assets/Project1/Screenshot 2026-04-19 175757.png" class="slide active" />
+                                <img src="./assets/Project1/Screenshot 2026-04-19 175853.png" class="slide" />
+                            </div>
+
+                            <button class="prev" onclick="changeSlide(this, -1)">&#10094;</button>
+                            <button class="next" onclick="changeSlide(this, 1)">&#10095;</button>
+                        </div>
+
+                        <div class="project-content">
+                            <h3>Social Network</h3>
+                            <p>
+                                A full-stack social media web application where users can create posts, follow other
+                                users, like posts, and interact in a dynamic feed.
+                            </p>
+
+                            <div class="tech-stack">
+                                <span>Python</span>
+                                <span>Django</span>
+                                <span>JavaScript</span>
+                            </div>
+
+                            <ul class="project-details">
+                                <li>User authentication and profiles</li>
+                                <li>Follow/unfollow system</li>
+                                <li>Like and edit posts dynamically</li>
+                                <li>Pagination and real-time updates</li>
+                            </ul>
+
+                            <div class="project-links">
+                                <a href="#" target="_blank"> <i class="bi bi-box-arrow-up-right"></i> Live </a>
+                                <a href="#" target="_blank"> <i class="bi bi-github"></i> Code </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="slider">
+                            <div class="slides">
+                                <img src="./assets/Project2/Screenshot 2026-04-19 175157.png" class="slide active" />
+                                <img src="./assets/Project2/Screenshot 2026-04-19 175212.png" class="slide" />
+                                <img src="./assets/Project2/Screenshot 2026-04-19 175301.png" class="slide" />
+                            </div>
+
+                            <button class="prev" onclick="changeSlide(this, -1)">&#10094;</button>
+                            <button class="next" onclick="changeSlide(this, 1)">&#10095;</button>
+                        </div>
+                        <div class="project-content">
+                            <h3>A Mail WebApp</h3>
+                            <p>
+                                A single-page email client that allows users to send, receive, and organize emails
+                                dynamically without reloading the page.
+                            </p>
+
+                            <div class="tech-stack">
+                                <span>JavaScript</span>
+                                <span>HTML</span>
+                                <span>CSS</span>
+                            </div>
+
+                            <ul class="project-details">
+                                <li>Single Page Application (SPA)</li>
+                                <li>Fetch API for backend communication</li>
+                                <li>Dynamic UI rendering</li>
+                            </ul>
+
+                            <div class="project-links">
+                                <a href="#" target="_blank"> <i class="bi bi-box-arrow-up-right"></i> Live </a>
+                                <a href="https://github.com/Hemarnuel10/mail"> <i class="bi bi-github"></i> Code </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="slides">
+                            <img src="./assets/Project3/Screenshot 2026-04-19 205226.png" class="slide active" />
+                            <img src="./assets/Project3/Screenshot 2026-04-19 205259.png" class="slide" />
+                        </div>
+                        <div class="project-content">
+                            <h3>Wiki</h3>
+                            <p>
+                                A Wikipedia-like web app where users can create, edit, search, and view encyclopedia
+                                entries.
+                            </p>
+
+                            <div class="tech-stack">
+                                <span>Python</span>
+                                <span>Django</span>
+                                <span>Markdown</span>
+                            </div>
+
+                            <ul class="project-details">
+                                <li>Create and edit entries</li>
+                                <li>Search functionality</li>
+                                <li>Markdown-to-HTML rendering</li>
+                            </ul>
+
+                            <div class="project-links">
+                                <a href="#" target="_blank"> <i class="bi bi-box-arrow-up-right"></i> Live </a>
+                                <a href="#" target="_blank"> <i class="bi bi-github"></i> Code </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="slider">
+                            <div class="slides">
+                                <img src="./assets/Project4/Screenshot 2026-04-19 174813.png" class="slide active" />
+                                <img src="./assets/Project4/Screenshot (202).png" class="slide" />
+                                <img src="./assets/Project4/Screenshot 2026-04-19 174908.png" class="slide" />
+                                <img src="./assets/Project4/Screenshot 2026-04-19 174919.png" class="slide" />
+                                <img src="./assets/Project4/Screenshot 2026-04-19 175001.png" class="slide" />
+                            </div>
+
+                            <button class="prev" onclick="changeSlide(this, -1)">&#10094;</button>
+                            <button class="next" onclick="changeSlide(this, 1)">&#10095;</button>
+                        </div>
+
+                        <div class="project-content">
+                            <h3>A Commerce Website</h3>
+                            <p>
+                                An e-commerce web application where users can create listings, place bids, add items to
+                                a watchlist, and interact with listings through comments.
+                            </p>
+
+                            <div class="tech-stack">
+                                <span>Python</span>
+                                <span>Django</span>
+                                <span>SQLite</span>
+                            </div>
+
+                            <ul class="project-details">
+                                <li>Create and manage product listings</li>
+                                <li>Bidding system with real-time updates</li>
+                                <li>User authentication and watchlist</li>
+                                <li>Category filtering and comments</li>
+                            </ul>
+
+                            <div class="project-links">
+                                <a href="#" target="_blank"> <i class="bi bi-box-arrow-up-right"></i> Live </a>
+                                <a href=" https://github.com/Hemarnuel10/commerce" target="_blank">
+                                    <i class="bi bi-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
-        
-        <section class="projects" id="projects">
-            <h2>My Projects</h2>
+            </section>
 
-            <div class="project-container">
-
-                <div class="project-card">
-                    <h3>Project 1</h3>
-                    <p>A simple landing page built with HTML and CSS.</p>
-                </div>
-
-                <div class="project-card">
-                    <h3>Project 2</h3>
-                    <p>A student budget tracker UI concept.</p>
-                </div>
-
-                <div class="project-card">
-                    <h3>Project 3</h3>
-                    <p>Portfolio website design.</p>
-                </div>
-            </div>
-
-        </section>
-
-     <section class="contact" id="contact">
-        <h2>Contact Me</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message"></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-    </main>
-    <footer>
-        <p>© 2026 Emmanuel. All rights reserved.</p>
-    </footer></body>
+            <section class="contact" id="contact">
+                <h2>Contact Me</h2>
+                <form>
+                    <input type="text" placeholder="Your Name" required />
+                    <input type="email" placeholder="Your Email" required />
+                    <textarea placeholder="Your Message"></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>© 2026 Emmanuel. All rights reserved.</p>
+        </footer>
+    </body>
 </html>

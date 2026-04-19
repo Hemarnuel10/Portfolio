@@ -4,6 +4,9 @@
     padding: 0;
 }
 
+li{
+    list-style: none;
+}
 
 h2{
     padding-bottom: 20px;
@@ -62,7 +65,8 @@ nav ul{
 }
 
 .hero img{
-    padding: 0 10vw 0 5vw   ;
+    margin: 0 10vw 0 5vw;
+    border-radius: 50%;
 }
 .intro h2{
     font-size: 40px;
@@ -116,12 +120,27 @@ nav ul{
 
 .about-info{
     display: flex;
-    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
+.about-intro{
+    align-self: center;
+    padding-bottom: 40px;
+    justify-self: center;
+    color: #cbd5e1;
+    line-height: 1.8;
+    font-size: 16px;
+    max-width: 600px;
+}
+
+
 .about img{
-    border: 2px solid green;
-    padding: 15px;
+    border: 2px solid #00ff88;
+    margin-top: 20px;
+    transition: 0.3s ease;
+    border-radius: 50%;
 
 }
 
@@ -129,9 +148,17 @@ nav ul{
     padding-top: 20px;
 }
 
+#experience-info li{
+    padding-top: 20px;
+}
+
+#experience-info h3{
+    color: #cbd5e1;
+    text-align: center;
+}
+
 .skill-details{
-    display: flex;
-    margin-left: 15vw;
+    display: flex;;
     gap: 50px;
 }
 .details{
@@ -140,6 +167,34 @@ nav ul{
     gap: 40px;
     padding-top: 20px;
 }
+
+.details p{
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    color: #94a3b8;
+}
+
+.details p.active{
+    background-color: #00ff88;
+    color: black;
+}
+
+.details p:hover{
+    cursor: pointer;
+    border-bottom:2px solid #00ff88;;
+    transition: all 0.6s ease ;
+}
+
+.tab-content{
+    min-width: 300px;
+    background-color: #0f172a;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+}
+
 
 .project-container{
     display: flex;
@@ -162,17 +217,83 @@ nav ul{
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-#skill-info{
+.project-card img{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.tech-stack{
+    margin: 10px 0;
+}
+
+.tech-stack span{
+    background-color: #334155;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.project-links{
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+}
+
+.project-card h3{
+    color: green;
+}
+
+.tab-content{
     display: none;
 }
 
-.level{
-    background-color: white;
-    padding-left:200px;
-    border-radius: 2vw ;
-    width: 100%;
-    height:5px;
+#skill-info{
+    display: block;
 }
+
+.level{
+    background-color: #334155;
+    width: 100%;
+    height: 8px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.score{
+    display: block;
+    height: 100%;
+    background-color: #00ff88;
+    border-radius: 20px;
+    animation: fill 1.5s ease-in-out;
+}
+
+.score{
+    animation: fill 1.5s ease-in-out;
+}
+
+@keyframes fill{
+    from { width: 0; }
+}
+
+.html{
+    width: 99%;
+}
+
+.css{
+    width: 95%;
+}
+
+.django{
+    width: 50%;
+}
+
+.js{
+    width: 60%;
+}
+
 
 form{
     display: flex;
@@ -185,13 +306,15 @@ input{
     height: 5vh;
     border-radius: 20px;
     padding-left: 20px;
-        border: 2px solid green;
+    border: 2px solid green;
     outline: none;
 }
 
+
+
 textarea{
     height: 200px;
-        border: 2px solid green;
+    border: 2px solid green;
     border-radius: 20px;
     padding: 20px 0px 0px 20px;
     outline: none;
@@ -218,10 +341,10 @@ footer{
 @media(min-width:845px){
     main{
     padding: 30px 100px;
-}
-.about-info{
-  gap: 90px;
-}
+    }
+    .about-info{
+    gap: 30px;
+    }
 }
 
 @media(max-width:845px){
@@ -238,18 +361,25 @@ footer{
     display: flex;
     justify-content: space-around;
     gap: 10px;
-}
+    }
 
     .hero, .about, .projects, .contact{
     padding: 20px;
     margin-bottom: 30px;
     }
 
-    .about-info{
-        flex-direction: column-reverse;
+    .details{
+        flex-direction: row;
+    }
+
+    .skill-details{
+        flex-direction: column;
         align-items: center;
     }
 
+    .tab-content{
+        width: 100%;
+    }
     .hero{
         flex-direction: column;
         /* gap: 20px; */
@@ -272,4 +402,53 @@ footer{
     a{
         font-size: 12px;
     }
+}
+
+
+.slider{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.slides{
+    position: relative;
+}
+
+.slide{
+    width: 100%;
+    display: none;
+    border-radius: 15px;
+}
+
+.slide.active{
+    display: block;
+}
+
+/* Buttons */
+.prev, .next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.prev{
+    left: 10px;
+}
+
+.next{
+    right: 10px;
+}
+
+.prev:hover, .next:hover{
+    background-color: gray;
+    color: black;
 }
