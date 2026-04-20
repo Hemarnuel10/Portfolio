@@ -4,10 +4,6 @@
     padding: 0;
 }
 
-li{
-    list-style: none;
-}
-
 h2{
     padding-bottom: 20px;
     font-size: 30px;
@@ -68,6 +64,7 @@ nav ul{
     margin: 0 10vw 0 5vw;
     border-radius: 50%;
 }
+
 .intro h2{
     font-size: 40px;
 }
@@ -86,6 +83,7 @@ nav ul{
     display: flex;
     flex-wrap: wrap;
 }
+
 .social i{
     border: 2px solid green;
     border-radius: 50%;
@@ -155,6 +153,10 @@ nav ul{
 #experience-info h3{
     color: #cbd5e1;
     text-align: center;
+}
+
+#experience-info ul{
+    padding: 10px;
 }
 
 .skill-details{
@@ -348,12 +350,16 @@ footer{
 }
 
 @media(max-width:845px){
-
     main{
         padding: 30px 10vw;
     }
+
     header h1{
         font-size: 20px;
+    }
+    
+    .hero img{
+      margin: 0 10vw;
     }
 
     nav ul{
