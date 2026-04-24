@@ -3,19 +3,20 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Emmanuel Abegunde — frontend developer portfolio">.
         <title>Abegunde Emmanuel | Portfolio</title>
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
         />
         <link rel="stylesheet" href="./css/styles.css" />
-        <script src="./index.js"></script>
+        <script src="./index.js" defer></script>
     </head>
 
     <body>
         <header>
             <nav>
-                <h1>MyPortfolio</h1>
+                <h1>Emmanuel Abegunde</h1>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -28,17 +29,15 @@
         <main>
             <section id="home" class="hero">
                 <div>
-                    <img src="./assets/emmanuel.png" alt="" height="300px" />
+                    <img src="./assets/emmanuel.png" alt="profile-image" height="300px" loading="lazy" />
                 </div>
 
                 <div class="intro">
-                    <h1>Hello, I'm <span id="name">Emmanuel</span></h1>
-                    <h3>Frontend Developer | Web3 Enthusiast</h3>
+                    <div id="intro-name">Hello, I'm <span id="name">Emmanuel</span></div>
+                    <h3>Frontend Developer & Web3 Explorer</h3>
                     <p>
-                        I’m a passionate Web developer with a growing interest in Web3 and emerging technologies. I
-                        enjoy transforming ideas into clean, responsive, and user-friendly web experiences. With a
-                        strong foundation in HTML, CSS, and Django, I’m constantly learning and building projects that
-                        solve real-world problems while improving my skills every day.
+                       "Frontend developer with hands-on experience building full-stack web apps using HTML, CSS, JavaScript,
+                        and Django. Currently exploring Web3 and blockchain development. Based in Lagos, Nigeria.
                     </p>
                     <div class="social">
                         <a href="https://www.linkedin.com/in/emmanuelabegunde"><i class="bi bi-linkedin"></i></a>
@@ -49,6 +48,8 @@
                     <a href="#projects"
                         ><button>View My Work <i class="bi bi-arrow-bar-right bi-2x"></i></button
                     ></a>
+                    <a href="#" download>
+                        <button>Download CV <i class="bi bi-download"></i></button></a>
                 </div>
             </section>
 
@@ -56,13 +57,15 @@
                 <h2>About Me</h2>
                 <div class="about-info">
                     <div>
-                        <img src="./assets/emmanuel.png" alt="" height="220px" />
+                        <img src="./assets/emmanuel.png" alt="profile-image" height="220px" loading="lazy" />
                     </div>
 
                     <div>
                         <p class="about-intro">
-                            I'm a passionate web developer Proficient in HTML, CSS, JavaScript and Django. I love
-                            building clean and responsive websites.
+                            I'm a self-driven developer who transitioned from Aerospace Engineering into 
+                            web development through hands-on, project-based learning. I build clean, 
+                            responsive web applications and enjoy solving real problems through code
+                            from dynamic frontends to full-stack Django projects.
                         </p>
 
                         <div class="skill-details">
@@ -74,57 +77,60 @@
 
                             <div id="skill-info" class="tab-content">
                                 <p>HTML</p>
-                                <div class="level"><span class="score html"></span> 99%</div>
+                                <div class="level"><span class="score html"></span> 85%</div>
 
                                 <p>CSS</p>
-                                <div class="level"><span class="score css"></span> 95%</div>
+                                <div class="level"><span class="score css"></span> 80%</div>
 
                                 <p>JAVASCRIPT</p>
                                 <div class="level"><span class="score js"></span> 60%</div>
 
                                 <p>DJANGO</p>
-                                <div class="level"><span class="score django"></span> 50%</div>
+                                <div class="level"><span class="score django"></span> 55%</div>
+                            
+                                 <p>Git / GitHub</p>
+                                <div class="level"><span class="score git"></span> 45%</div>
                             </div>
 
-                            <div id="experience-info" class="tab-content">
-                                <h3>Web Development Experience</h3>
-                                 <ul>
 
+                           <div id="experience-info" class="tab-content">
+                                <h3>Web development experience</h3>
+                                <ul>
                                     <li>
-                                        I have practical experience building full-stack and frontend web applications
-                                        through personal projects and structured learning.
+                                    Built a full-stack social network with user authentication, a 
+                                    follow/unfollow system, post liking, and paginated feeds using 
+                                    Python, Django, and JavaScript.
                                     </li>
-
-                               
                                     <li>
-                                        Built multiple web applications using HTML, CSS, and JavaScript, focusing on
-                                        responsive and user-friendly design.
+                                    Developed a single-page email client (no page reloads) using the 
+                                    Fetch API for all backend communication — send, receive, archive, 
+                                    and reply entirely in JavaScript.
                                     </li>
-
                                     <li>
-                                        Completed projects including Social Network, Mail, Wiki, and Commerce, gaining
-                                        hands-on experience with backend development using Python and Django.
+                                    Created a Wikipedia-like encyclopedia app with Markdown-to-HTML 
+                                    rendering, full-text search, and entry creation/editing, built 
+                                    with Django.
                                     </li>
-
                                     <li>
-                                        Developed understanding of database design, user authentication systems, and
-                                        dynamic web applications.
+                                    Built an e-commerce auction platform with product listings, a 
+                                    live bidding system, watchlists, category filtering, and 
+                                    comment threads — backed by SQLite via Django ORM.
                                     </li>
-
                                     <li>
-                                        Actively learning modern web development practices and exploring Web3
-                                        technologies and blockchain fundamentals.
-                                    </li>
-
-                                    <li>
-                                        Built and deployed personal projects to improve problem-solving, debugging, and
-                                        code structuring skills.
+                                    Comfortable working across the full stack: HTML/CSS for UI, 
+                                    JavaScript for interactivity, and Django + SQLite for backend 
+                                    logic and data persistence.
                                     </li>
                                 </ul>
                             </div>
 
                             <div id="education-info" class="tab-content">
-                                <p>BSc Aerospace Engineering - Lagos State University</p>
+                                <p><strong>BSc Aerospace Engineering</strong> — Lagos State University</p>
+                                <p id="exp-details">
+                                    Transitioned into software development through self-directed learning 
+                                    and project-based study, including Harvard's CS50W (Web Programming 
+                                    with Python and JavaScript).
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -134,11 +140,12 @@
             <section class="projects" id="projects">
                 <h2>My Projects</h2>
                 <div class="project-container">
+
                     <div class="project-card">
                         <div class="slider">
                             <div class="slides">
-                                <img src="./assets/Project1/Screenshot 2026-04-19 175757.png" class="slide active" />
-                                <img src="./assets/Project1/Screenshot 2026-04-19 175853.png" class="slide" />
+                                <img src="./assets/Project1/Screenshot 2026-04-19 175757.png" loading="lazy" class="slide active" />
+                                <img src="./assets/Project1/Screenshot 2026-04-19 175853.png"  loading="lazy" class="slide" />
                             </div>
 
                             <button class="prev" onclick="changeSlide(this, -1)">&#10094;</button>
@@ -148,8 +155,9 @@
                         <div class="project-content">
                             <h3>Social Network</h3>
                             <p>
-                                A full-stack social media web application where users can create posts, follow other
-                                users, like posts, and interact in a dynamic feed.
+                               A full-stack social media platform built with Django and JavaScript. 
+                                Users can post, follow others, like content, and browse a paginated 
+                                feed — all with dynamic updates and no full page reloads.
                             </p>
 
                             <div class="tech-stack">
@@ -175,20 +183,21 @@
                     <div class="project-card">
                         <div class="slider">
                             <div class="slides">
-                                <img src="./assets/Project2/Screenshot 2026-04-19 175157.png" class="slide active" />
-                                <img src="./assets/Project2/Screenshot 2026-04-19 175212.png" class="slide" />
-                                <img src="./assets/Project2/Screenshot 2026-04-19 175301.png" class="slide" />
+                                <img src="./assets/Project2/Screenshot 2026-04-19 175157.png" loading="lazy" class="slide active" />
+                                <img src="./assets/Project2/Screenshot 2026-04-19 175212.png" loading="lazy" class="slide" />
+                                <img src="./assets/Project2/Screenshot 2026-04-19 175301.png" loading="lazy"  class="slide" />
                             </div>
 
                             <button class="prev" onclick="changeSlide(this, -1)">&#10094;</button>
                             <button class="next" onclick="changeSlide(this, 1)">&#10095;</button>
                         </div>
-                        <div class="project-content">
-                            <h3>A Mail WebApp</h3>
-                            <p>
-                                A single-page email client that allows users to send, receive, and organize emails
-                                dynamically without reloading the page.
-                            </p>
+
+                        <h3>MailClient</h3>
+                        <p>
+                            A single-page email application where all sending, receiving, 
+                            archiving, and replying happens via JavaScript and the Fetch API — 
+                            no page reloads required.
+                        </p>
 
                             <div class="tech-stack">
                                 <span>JavaScript</span>
@@ -207,18 +216,25 @@
                                 <a href="https://github.com/Hemarnuel10/mail"> <i class="bi bi-github"></i> Code </a>
                             </div>
                         </div>
-                    </div>
+
 
                     <div class="project-card">
-                        <div class="slides">
-                            <img src="./assets/Project3/Screenshot 2026-04-19 205226.png" class="slide active" />
-                            <img src="./assets/Project3/Screenshot 2026-04-19 205259.png" class="slide" />
+                        <div class="slider">
+                            <div class="slides">
+                                <img src="./assets/Project3/Screenshot 2026-04-19 205226.png" loading="lazy" class="slide active" />
+                                <img src="./assets/Project3/Screenshot 2026-04-19 205259.png" loading="lazy" class="slide" />
+                            </div>
+
+                            <button class="prev" onclick="changeSlide(this, -1)">&#10094;</button>
+                            <button class="next" onclick="changeSlide(this, 1)">&#10095;</button>
                         </div>
+
                         <div class="project-content">
-                            <h3>Wiki</h3>
+                            <h3>Wiki Base</h3>
                             <p>
-                                A Wikipedia-like web app where users can create, edit, search, and view encyclopedia
-                                entries.
+                                A Django-powered encyclopedia where users can create, edit, and 
+                                search entries written in Markdown, which are rendered as formatted 
+                                HTML pages.
                             </p>
 
                             <div class="tech-stack">
@@ -243,10 +259,10 @@
                     <div class="project-card">
                         <div class="slider">
                             <div class="slides">
-                                <img src="./assets/Project4/Screenshot (202).png" class="slide" />
-                                <img src="./assets/Project4/Screenshot 2026-04-19 174908.png" class="slide" />
-                                <img src="./assets/Project4/Screenshot 2026-04-19 174919.png" class="slide" />
-                                <img src="./assets/Project4/Screenshot 2026-04-19 175001.png" class="slide" />
+                                <img src="./assets/Project4/Screenshot (202).png" class="active slide" />
+                                <img src="./assets/Project4/Screenshot 2026-04-19 174908.png" loading="lazy" class="slide" />
+                                <img src="./assets/Project4/Screenshot 2026-04-19 174919.png" loading="lazy" class="slide">
+                                <img src="./assets/Project4/Screenshot 2026-04-19 175001.png" loading="lazy" class="slide">
                             </div>
 
                             <button class="prev" onclick="changeSlide(this, -1)">&#10094;</button>
@@ -254,10 +270,11 @@
                         </div>
 
                         <div class="project-content">
-                            <h3>A Commerce Website</h3>
+                            <h3>A Auction Website</h3>
                             <p>
-                                An e-commerce web application where users can create listings, place bids, add items to
-                                a watchlist, and interact with listings through comments.
+                                An e-commerce auction platform where users create listings, place 
+                                bids, manage a personal watchlist, and discuss items through 
+                                comments — built with Django and SQLite.
                             </p>
 
                             <div class="tech-stack">
@@ -275,7 +292,7 @@
 
                             <div class="project-links">
                                 <a href="#" target="_blank"> <i class="bi bi-box-arrow-up-right"></i> Live </a>
-                                <a href=" https://github.com/Hemarnuel10/commerce" target="_blank">
+                                <a href=" https://github.com/Hemarnuel10/commerce">
                                     <i class="bi bi-github"></i> Code
                                 </a>
                             </div>
@@ -286,10 +303,13 @@
 
             <section class="contact" id="contact">
                 <h2>Contact Me</h2>
-                <form>
+                <p id="contact-message">
+                    Have a project in mind or want to collaborate? I'd love to hear from you.
+                </p>
+                <form action="https://formspree.io/f/mqewwvol" method="POST">
                     <input type="text" placeholder="Your Name" required />
-                    <input type="email" placeholder="Your Email" required />
-                    <textarea placeholder="Your Message"></textarea>
+                    <input type="email" name="mail" placeholder="Your Email" required />
+                    <textarea name="message" placeholder="Your Message"></textarea>
                     <button type="submit">Send Message</button>
                 </form>
             </section>

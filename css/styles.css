@@ -64,6 +64,10 @@ nav ul{
     margin: 0 10vw 0 5vw;
     border-radius: 50%;
 }
+#intro-name{
+    font-size: 32px;
+    font-weight: bold;
+}
 
 .intro h2{
     font-size: 40px;
@@ -157,6 +161,13 @@ nav ul{
 
 #experience-info ul{
     padding: 10px;
+}
+
+
+#exp-details{
+    margin-top: 8px;
+    color:  #cbd5e1;;
+    font-size: 14px;
 }
 
 .skill-details{
@@ -281,19 +292,23 @@ nav ul{
 }
 
 .html{
-    width: 99%;
+    width: 85%;
 }
 
 .css{
-    width: 95%;
+    width: 80%;
 }
 
 .django{
-    width: 50%;
+    width: 55%;
 }
 
 .js{
     width: 60%;
+}
+
+.git{
+    width: 45%;
 }
 
 
@@ -304,6 +319,11 @@ form{
     margin: 0px 40px;
 }
 
+#contact-message{
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 1.5rem;
+}
 input{
     height: 5vh;
     border-radius: 20px;
@@ -323,6 +343,7 @@ textarea{
 }
 
 form button{
+    cursor: pointer;
     height: 40px;
     width: 200px;
     border-radius: 30px;
@@ -381,6 +402,7 @@ footer{
     .skill-details{
         flex-direction: column;
         align-items: center;
+        padding: 0px 10px;
     }
 
     .tab-content{
@@ -440,10 +462,10 @@ footer{
     background-color: rgba(0,0,0,0.6);
     color: white;
     border: none;
-    padding: 8px 12px;
+    padding: 4px 8px;
     cursor: pointer;
     border-radius: 50%;
-    font-size: 18px;
+    font-size: 10px;
 }
 
 .prev{
